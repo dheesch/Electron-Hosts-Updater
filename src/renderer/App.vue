@@ -1,20 +1,30 @@
 <template>
   <div id="app">
-    <landing-page></landing-page>
+    <hosts-updater></hosts-updater>
   </div>
 </template>
 
 <script>
-  import LandingPage from '@/components/LandingPage'
+  import HostsUpdater from '@/components/HostsUpdater'
 
   export default {
     name: 'electron-hosts-updater',
     components: {
-      LandingPage
+      HostsUpdater
     }
   }
 </script>
 
-<style>
+<style lang='scss'>
   /* CSS */
+  @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+  @import "~materialize-css/dist/css/materialize.min.css";
+
+  .row {
+    display: flex;
+  }
+
+  .col {
+    // flex: 1;
+  }
 </style>
