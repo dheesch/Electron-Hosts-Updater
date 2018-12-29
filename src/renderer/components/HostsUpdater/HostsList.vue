@@ -3,13 +3,7 @@
     <ul class='collection with-header'>
       <li class='collection-header'> <h5> Hosts </h5> </li>
       <li v-for="(host, index) in hosts" v-bind:key="'host-' + index" class='collection-item' :class="{ 'comment' : host.comment }" >
-        <div v-if="host.comment"> 
-          {{ host.comment }} 
-          <div class='secondary-content'>
-            <i class='material-icons'>delete</i>
-          </div>
-        </div>
-        <hosts-list-entry v-else :ip="host.ip" :domains="host.domains" :comment="host.comment"></hosts-list-entry>
+        <hosts-list-entry :ip="host.ip" :domains="host.domains" :comment="host.comment" :index="index"></hosts-list-entry>
       </li>
 
     </ul>

@@ -7,8 +7,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    hosts: {},
-    previouslyUsedHosts: {}
+    hosts: [],
+    previouslyUsedHosts: []
   },
   actions,
   mutations

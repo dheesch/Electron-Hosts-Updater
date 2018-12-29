@@ -31,6 +31,27 @@ function parseHosts (hosts) {
 
   return entries
 }
+function hostsString (hosts) {
+  var data = ''
+  console.log('################### \n hosts: ')
+  console.log(hosts)
+  for (var i = 0; i < hosts.length; i++) {
+    console.log(hosts[i])
+    if (hosts[i].comment) {
+      data += hosts[i].comment + '\n'
+    } else {
+      data += hosts[i].ip + ' '
+      if (hosts[i].domains) {
+        for (var j = 0; j < hosts[i].domains.length; j++) {
+          data += hosts[i].domains[j] + ' '
+        }
+      }
+      data += '\n'
+    }
+  }
+
+  return data
+}
 
 export default {
   getHosts ({ commit }) {
@@ -57,14 +78,22 @@ export default {
     if (fs.existsSync(path)) {
       fs.readFile(path, (err, data) => {
         if (err) { throw err }
+        console.log(data.toString())
         commit('setPreviouslyUsedHosts', data.toString())
       })
     } else {
-      var testData = [{ip: '127.0.0.1', domain: 'test.com'}]
+      var testData = [{ip: '127.0.0.1', domains: ['test.com']}]
       fs.writeFile(path, JSON.stringify(testData), (err) => {
         if (err) { throw err }
         commit('setPreviouslyUsedHosts', testData)
       })
     }
+  },
+  saveHosts ({commit}, hosts) {
+    var data = hostsString(hosts)
+
+    fs.writeFile('/etc/hosts', data, (err) => {
+      if (err) { throw err }
+    })
   }
 }

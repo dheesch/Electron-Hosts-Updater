@@ -57,6 +57,7 @@
   },
   "dependencies": {
     "materialize-css": "^1.0.0",
+    "vee-validate": "^2.1.4",
     "vue": "^2.5.16"
   },
   "devDependencies": {

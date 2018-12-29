@@ -28,5 +28,9 @@
 </script>
 
 <style lang='scss'>
-  
+  i {
+    &:hover {
+      color: #b71c1c
+    }
+  }
 </style>
