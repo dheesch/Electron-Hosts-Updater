@@ -19,5 +19,5 @@ ___
 - [ ] as a user, I can add a comment that will appear before the hosts entry
 - [x] as a user, my deleted entries will be saved for later use
 - [x] as a user, I can see previous entries
-- [x ] as a user, I can restore previous entries that were deleted
+- [x] as a user, I can restore previous entries that were deleted
 
