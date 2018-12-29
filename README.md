@@ -1,5 +1,8 @@
 # Hosts Updater - Electron
 
+- npm install 
+- sudo npm run dev 
+	- must run as sudo
 ___
 
 ### Intro 
@@ -9,12 +12,12 @@ ___
 
 
 ### Requirements
-- [ ] as a user, I can see a list of all entries in my host files 
-- [ ] as a user, I can click a button to delete an entry
+- [x] as a user, I can see a list of all entries in my host files 
+- [x] as a user, I can click a button to delete an entry
 - [ ] as a user, I can edit an existing entry
-- [ ] as a user, I can create a new entry
+- [x] as a user, I can create a new entry
 - [ ] as a user, I can add a comment that will appear before the hosts entry
-- [ ] as a user, my deleted entries will be saved for later use
-- [ ] as a user, I can see previous entries
-- [ ] as a user, I can restore previous entries that were deleted
+- [x] as a user, my deleted entries will be saved for later use
+- [x] as a user, I can see previous entries
+- [x ] as a user, I can restore previous entries that were deleted
 
